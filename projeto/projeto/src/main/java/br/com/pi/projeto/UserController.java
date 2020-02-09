@@ -16,7 +16,8 @@ public class UserController {
     @PostMapping("/signin")
     @ResponseBody
     public String  postSignin(@RequestParam String password, @RequestParam String user){
-        usuario = new User(user, password);//isso noa devia estar aqui, mas noa tem banco de dados para facilitar a vida
+        // isso noa devia estar aqui, mas noa tem banco de dados para facilitar a vida
+        usuario = new User(user, password);
         try{
             if (usuario.authenticate(user, password)) {
                 return "Usuario encontrado";
