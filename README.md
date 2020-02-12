@@ -1,3 +1,4 @@
+# Projeto 3º Semestre
 ```
 ██╗    ██╗███████╗██╗     ██╗███╗   ██╗██╗  ██╗
 ██║    ██║██╔════╝██║     ██║████╗  ██║██║ ██╔╝
@@ -7,6 +8,9 @@
  ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
                                  - Bandtec V1.0
 ```
+
+## Arquitetura de solução (HLD)
+<img src="https://i.imgur.com/oXByGIL.png" width="450">
 
 ## Integrantes
 
