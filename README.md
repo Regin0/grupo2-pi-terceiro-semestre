@@ -6,7 +6,7 @@
 ██║███╗██║██╔══╝  ██║     ██║██║╚██╗██║██╔═██╗ 
 ╚███╔███╔╝███████╗███████╗██║██║ ╚████║██║  ██╗
  ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
-                                 - Bandtec V1.0
+                                 - Bandtec V1.1
 ```
 O WeLink é um projeto que facilita a aproximação dos mercados de pequeno porte e seus fiéis clientes.
 Faça suas compras online e agende a busca de seus produtos, evite **filas** e não disperdice seu tempo!
