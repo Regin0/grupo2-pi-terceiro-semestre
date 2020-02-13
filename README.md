@@ -8,11 +8,20 @@
  ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
                                  - Bandtec V1.0
 ```
+O WeLink é um projeto que facilita a aproximação dos mercados de pequeno porte e seus fiéis clientes.
+Faça suas compras online e agende a busca de seus produtos, evite **filas** e não disperdice seu tempo!
 
 ## Arquitetura de solução (HLD)
 <img src="https://i.imgur.com/oXByGIL.png" width="450">
 
-## Integrantes
+# Pré requisitos
+
+- Git (https://git-scm.com/)
+- Java (https://java.com)
+- Node (https://nodejs.org)
+- NPM (https://npmjs.org)
+
+# Integrantes
 
 | **@aroni97** | **@franckcid** | **@NathJorge** | **@regin0** | **@WillianNM** |
 |---|---|---|---|---|
