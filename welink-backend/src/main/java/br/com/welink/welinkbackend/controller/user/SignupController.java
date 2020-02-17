@@ -1,25 +1,32 @@
 package br.com.welink.welinkbackend.controller.user;
 
+import br.com.welink.welinkbackend.model.TbUser;
+import br.com.welink.welinkbackend.repository.TbUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 public class SignupController {
-    //rotas de cadastro
-    @GetMapping("/signup")
-    public String getSignup(){
-        return "Renderizando a pagina de cadastro";
+
+    @Autowired
+    private TbUserRepository repository;
+
+    public SignupController(TbUserRepository repository) {
+        this.repository = repository;
     }
 
+    //rotas de cadastro
     @PostMapping("/signup")
     @ResponseBody
-    public String postSignup(@RequestParam String name, @RequestParam String cpf, @RequestParam String birthday,
+    public TbUser postSignup(@RequestParam String name, @RequestParam String cpf, @RequestParam String birthday,
                              @RequestParam String email, @RequestParam String password){
-        return "Chegaram estes dados \n"+
-                "Nome: "+ name+
-                "\nCPF: "+ cpf +
-                "\nBirthday: "+ birthday +
-                "\nEmail: "+ email +
-                "\nPassword: "+ password;
+        TbUser tbUser = new TbUser(name, cpf, birthday, email, password);
+
+        if (name.length() > 0 && name != null){
+            repository.save(tbUser);
+        }
+
+        return tbUser;
     }
 }

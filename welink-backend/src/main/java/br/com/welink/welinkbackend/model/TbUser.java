@@ -1,16 +1,30 @@
 package br.com.welink.welinkbackend.model;
 
+import javax.persistence.*;
+
+@Entity
 public class TbUser {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private Long id;
+    @Column
     private String name;
+    @Column
     private String email;
+    @Column
     private String password;
+    @Column
     private String cpf;
+    @Column
     private String date;
 
-    public TbUser(int id, String name, String email, String password, String cpf, String date) {
-        this.id = id;
+    public TbUser(){
+
+    }
+
+    public TbUser(String name, String email, String password, String cpf, String date) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -18,11 +32,11 @@ public class TbUser {
         this.date = date;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
