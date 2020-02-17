@@ -3,13 +3,19 @@ import { Layout, Row, Col } from 'antd';
 const { Content } = Layout;
 
 export default function CenteredLayout({children, fullHeight}){
-    const style = {
-        height: fullHeight ? '100vh' : 'auto',
-    }
+    /*
+        Layout com todos os componentes centralizados.
+        @param fullHeight (bool): layout "estica" pra 100% da altura
+        da tela.
+    */
     return (
         <Layout>
             <Content>
-                <Row style={style} type='flex' justify='center' align='middle'>
+                <Row
+                    className={fullHeight && 'full-vheight'}
+                    type='flex'
+                    justify='center'
+                    align='middle'>
                     {children}
                 </Row>
             </Content>

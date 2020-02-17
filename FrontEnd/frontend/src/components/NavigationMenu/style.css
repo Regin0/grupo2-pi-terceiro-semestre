@@ -1,0 +1,7 @@
+.menu .avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: middle;
+
+    padding: 16px;
+}

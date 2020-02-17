@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Layout, Row, Col } from 'antd';
 import { Form, Checkbox, Input, Button } from 'antd';
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
+const { Paragraph } = Typography;
 
 import { CenteredLayout } from 'layouts/';
 
@@ -16,11 +18,9 @@ function LoginForm(){
                 <Input.Password />
             </Form.Item>
             <Form.Item>
-                <Checkbox>
-                    Eu concordo em receber mensagens com novidades em meu e-mail.
-                </Checkbox>,
+                <Checkbox>Mantenha-me logado</Checkbox>,
             </Form.Item>
-            <Button type='primary'>Login</Button>
+            <Button type="primary" className="full-width">Login</Button>
         </Form>
     )
 }
@@ -28,9 +28,10 @@ function LoginForm(){
 export default function LoginPage() {
     return (
         <CenteredLayout fullHeight>
-            <Col span={9}>
+            <Col xs={24} lg={10}>
                 <Card>
                         <LoginForm/>
+                        <Paragraph className="mv1">Ainda não tem conta? <Link to="/signin">Clique aqui para se cadastrar</Link></Paragraph>
                 </Card>
             </Col>
         </CenteredLayout>
