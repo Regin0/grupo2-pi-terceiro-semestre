@@ -10,26 +10,26 @@ public class TbUser {
     @Column
     private Long id;
     @Column
-    private String name;
+    private String cpf;
     @Column
     private String email;
     @Column
+    private String birthday;
+    @Column
+    private String name;
+    @Column
     private String password;
-    @Column
-    private String cpf;
-    @Column
-    private String date;
 
     public TbUser(){
 
     }
 
-    public TbUser(String name, String email, String password, String cpf, String date) {
+    public TbUser(String cpf, String birthday, String email, String name, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.cpf = cpf;
-        this.date = date;
+        this.birthday = birthday;
     }
 
     public Long getId() {
@@ -40,12 +40,12 @@ public class TbUser {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
@@ -56,6 +56,22 @@ public class TbUser {
         this.email = email;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -64,23 +80,7 @@ public class TbUser {
         this.password = password;
     }
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String erroMessage(Integer i){
+    public String errorMessage(Integer i){
         switch (i){
             case 1:
                 return "Usuário cadastrdo!";

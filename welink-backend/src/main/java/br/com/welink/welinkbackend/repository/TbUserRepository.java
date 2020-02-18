@@ -5,5 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface TbUserRepository extends CrudRepository<TbUser, Long> {
 
-    public TbUser findByCpf(String cpf );
+    public TbUser findOneByemail(String email );
+
+    public TbUser findByPassword(String password );
 }

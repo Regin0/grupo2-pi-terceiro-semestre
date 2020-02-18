@@ -26,6 +26,16 @@ public class SigninController {
         return (List<TbUser>) repository.findAll();
     }
 
+    @PostMapping("/signin")
+    @ResponseBody
+    public String validateLogin(@RequestParam String email, @RequestParam String password){
+        if (loginValidate(email, password)){
+            return "true";
+        }else {
+            return "nao foi";
+        }
+    }
+
     @GetMapping("/signin/{id}")
     @ResponseBody
     public Optional<TbUser> findOne(@PathVariable("id") Long id){
@@ -36,5 +46,18 @@ public class SigninController {
     @ResponseBody
     public void destroy(@PathVariable Long id){
        repository.deleteById(id);
+    }
+
+    public Boolean loginValidate(String email, String password){
+        System.out.println(repository.findOneByemail(email).getPassword());
+        if (repository.findOneByemail(email)!=null){
+            if (repository.findOneByemail(email).getPassword()==password) {
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }//ESTA DANDO ERRO NA VALIDAÇÃO VERIFICAR
     }
 }
