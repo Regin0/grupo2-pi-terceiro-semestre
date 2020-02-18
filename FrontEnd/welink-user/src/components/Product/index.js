@@ -4,13 +4,13 @@ import './style.css';
 
 export default function Product(){
     const actions = [
-        <Icon type="setting" key="setting" />,
+        <Icon type="info-circle" key="info" />,
         <Icon type="shopping-cart" key="shopping-cart" />,
     ]
 
     const avatar = (
         <Avatar
-            size={150}
+            size={100}
             src="https://cdn0.woolworths.media/content/new-homepage/offertile-special-fruit-veg-white-seedless-grapes.jpg"/>
     )
     return (
