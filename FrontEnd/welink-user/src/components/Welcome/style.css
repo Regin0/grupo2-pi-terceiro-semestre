@@ -1,0 +1,13 @@
+.welcome {
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: #2f54eb;
+}
+
+.welcome span {
+    color: white;
+    font-size: 1.5em;
+}

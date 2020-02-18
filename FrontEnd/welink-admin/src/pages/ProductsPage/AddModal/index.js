@@ -7,8 +7,6 @@ function ModalContent({open, setOpen}){
     const onOk = e => setOpen(false);
     const onCancel = e => setOpen(false);
 
-    console.log('fmts', fmts)
-
     const itemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -31,6 +29,9 @@ function ModalContent({open, setOpen}){
                 </Form.Item>
                 <Form.Item label="Preço">
                     <InputNumber className="full-width" parser={fmts.currency.parser}formatter={fmts.currency.formatter}/>
+                </Form.Item>
+                <Form.Item label="Data de vencimento">
+                    <DatePicker className="full-width" format={fmts.date.default}/>
                 </Form.Item>
                 <Form.Item label="Data de vencimento">
                     <DatePicker className="full-width" format={fmts.date.default}/>
