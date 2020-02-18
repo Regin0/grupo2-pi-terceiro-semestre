@@ -19,14 +19,15 @@ public class SignupController {
     //rotas de cadastro
     @PostMapping("/signup")
     @ResponseBody
-    public TbUser postSignup(@RequestParam String name, @RequestParam String cpf, @RequestParam String birthday,
-                             @RequestParam String email, @RequestParam String password){
-        TbUser tbUser = new TbUser(name, cpf, birthday, email, password);
+    public String postSignup(@RequestParam String name, @RequestParam String password, @RequestParam String email,
+                             @RequestParam String cpf, @RequestParam String birthday){
+        TbUser tbUser = new TbUser(name, cpf, birthday, email, password);//instancia a classe do tbUser
 
-        if (name.length() > 0 && name != null){
+        if (repository.findByCpf(cpf) == null){//validação se o cpf do usuario existe
             repository.save(tbUser);
+            return tbUser.erroMessage(1);
+        }else{
+            return tbUser.erroMessage(2);
         }
-
-        return tbUser;
     }
 }

@@ -29,13 +29,7 @@ public class SigninController {
     @GetMapping("/signin/{id}")
     @ResponseBody
     public Optional<TbUser> findOne(@PathVariable("id") Long id){
-        return repository.findById(id);//se nao achr retorna null
-    }
-
-    @GetMapping("/signin/name/{name}")
-    @ResponseBody
-    public TbUser findName(@PathVariable("name") String name){
-        return repository.findByName(name);//da ruim se tiver mais de um, recomendavel fazer lista
+        return repository.findById(id);//se nao achar retorna null
     }
 
     @DeleteMapping("/{id}")

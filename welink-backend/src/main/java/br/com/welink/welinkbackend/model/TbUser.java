@@ -79,4 +79,17 @@ public class TbUser {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public String erroMessage(Integer i){
+        switch (i){
+            case 1:
+                return "Usuário cadastrdo!";
+            case 2:
+                return "Usuário já existe!";
+            default:
+                return "Desculpe, mas este erro é desconehcido, por favor contatar o suporte";
+        }
+    }
 }
+
+//w3l1nk4dM
