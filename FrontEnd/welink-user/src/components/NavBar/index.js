@@ -22,8 +22,12 @@ export default function NavBar(){
             <Row type="flex" justify="space-between" align="middle"
                 className="navbar p-2">
                 <Col><MenuToggler/></Col>
-                <Col offset={16}><ShoppingCart/></Col>
-                <Col><UserMenu/></Col>
+                <Col>
+                    <Row type="flex" gutter={[6]}>
+                        <Col><ShoppingCart/></Col>
+                        <Col><UserMenu/></Col>
+                    </Row>
+                </Col>
             </Row>
             <Row type="flex" justify="space-between" align="middle"
                 className="navbar p-2">
