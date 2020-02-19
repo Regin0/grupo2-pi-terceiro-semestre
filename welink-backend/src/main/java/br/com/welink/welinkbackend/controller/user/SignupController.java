@@ -1,6 +1,7 @@
 package br.com.welink.welinkbackend.controller.user;
 
 import br.com.welink.welinkbackend.model.TbUser;
+import br.com.welink.welinkbackend.repository.TbUserAdminRepository;
 import br.com.welink.welinkbackend.repository.TbUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,4 +31,5 @@ public class SignupController {
             return tbUser.errorMessage(2);
         }
     }
+
 }
