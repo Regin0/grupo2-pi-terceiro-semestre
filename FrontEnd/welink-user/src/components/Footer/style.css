@@ -1,13 +1,15 @@
-.footer {
-    padding: 12px;
+.footer .market {
+    background-color: #c11a26;
     text-align: center;
-    display: flex;
-    justify-content: center;
-
-    background-color: #05386b;
+    padding: 14px 24px;
 }
 
 .footer span {
     color: white;
-    font-size: 1.5em;
+}
+
+.footer .brand {
+    text-align: center;
+    padding: 14px 24px;
+    background-color: #333;
 }

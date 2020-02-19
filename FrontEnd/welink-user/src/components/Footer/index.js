@@ -7,8 +7,13 @@ const { Text } = Typography;
 
 export default function Footer(){
     return (
-        <div className="footer">
-            <Text>WeLink ®</Text>
-        </div>
+        <footer className="footer">
+            <div className="market">
+                <Text>Mercadinho do Antônio - +55 11 12345-6789 ✆ </Text>
+            </div>
+            <div className="brand">
+                <Text>WeLink ® - 2020</Text>
+            </div>
+        </footer>
     )
 }

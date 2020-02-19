@@ -13,8 +13,9 @@ function CarouselImage({src}){
 export default function SalesCarousel(){
     return (
         <Carousel autoplay className="sales-carousel">
-            <CarouselImage src="https://cdn.pixabay.com/photo/2018/06/10/17/39/market-3466906_960_720.jpg"/>
-            <CarouselImage src="https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_960_720.jpg"/>
+            <CarouselImage src="https://www.solidbackgrounds.com/images/950x350/950x350-teal-solid-color-background.jpg"/>
+            <CarouselImage src="https://www.solidbackgrounds.com/images/950x350/950x350-crimson-solid-color-background.jpg"/>
+            <CarouselImage src="https://www.solidbackgrounds.com/images/3508x2480/3508x2480-dark-pastel-blue-solid-color-background.jpg"/>
         </Carousel>
     )
 }

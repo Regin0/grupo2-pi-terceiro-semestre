@@ -28,10 +28,7 @@ function ModalContent({open, setOpen}){
                     <Input/>
                 </Form.Item>
                 <Form.Item label="Preço">
-                    <InputNumber className="full-width" parser={fmts.currency.parser}formatter={fmts.currency.formatter}/>
-                </Form.Item>
-                <Form.Item label="Data de vencimento">
-                    <DatePicker className="full-width" format={fmts.date.default}/>
+                    <InputNumber className="full-width" parser={fmts.currency.parser} formatter={fmts.currency.formatter}/>
                 </Form.Item>
                 <Form.Item label="Data de vencimento">
                     <DatePicker className="full-width" format={fmts.date.default}/>

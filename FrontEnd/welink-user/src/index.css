@@ -2,10 +2,14 @@ body {
     background-color: #edf5e1;
 }
 
-.nobg {
-    background: transparent;
+.ant-btn.no-bg, .no-bg {
+    background: transparent !important;
 }
 
-.noborder {
-    border: none;
+.ant-btn.no-border, .no-border {
+    border: none !important;
+}
+
+.text-white {
+    color: white;
 }

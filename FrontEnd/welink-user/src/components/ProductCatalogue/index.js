@@ -15,7 +15,7 @@ function ColItem(){
 
 export default function ProductCatalogue(){
     return (<main className="p-4">
-        <Title>Produtos em destaque</Title>
+        <Title>Mais vendidos</Title>
         <Row gutter={[8, 8]} className="mt-2 mb-2">
             {[1,1,1,1,1,1,1,1].map(p => <ColItem/>)}
         </Row>
