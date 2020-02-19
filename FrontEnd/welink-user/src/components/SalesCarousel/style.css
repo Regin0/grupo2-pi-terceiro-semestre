@@ -1,0 +1,8 @@
+.sales-carousel {
+    height: 350px;
+}
+
+.sales-carousel figure {
+    height: 350px;
+    background-position: center;
+}

@@ -1,0 +1,11 @@
+body {
+    background-color: #edf5e1;
+}
+
+.nobg {
+    background: transparent;
+}
+
+.noborder {
+    border: none;
+}

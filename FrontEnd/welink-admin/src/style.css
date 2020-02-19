@@ -1,0 +1,38 @@
+:root {
+    --bg-theme-color: #fff;
+}
+/* Colors */
+.themed-bg {
+    background-color: var(--bg-theme-color);
+}
+/* Layouts */
+/* Full viewport width and height */
+.full-vwidth {
+    min-width: 100vw;
+}
+.full-vheight {
+    min-height: 100vh;
+}
+
+/* Full (100%) width and height of parent node */
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+
+/* Padding */
+.p0 { padding: 0 }
+.p1 { padding: 8px }
+.p2 { padding: 16px }
+
+/* Margin */
+.m0 { margin: 0 }
+.m1 { margin: 8px }
+.m2 { margin: 16px }
+
+.mv0 { margin-top: 0; margin-bottom: 0 }
+.mv1 { margin-top: 8px; margin-bottom: 8px }
+.mv2 { margin-top: 16px; margin-bottom: 16px }
+
