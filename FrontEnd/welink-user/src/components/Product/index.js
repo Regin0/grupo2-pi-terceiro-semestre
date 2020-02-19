@@ -13,10 +13,16 @@ export default function Product(){
             size={100}
             src="https://cdn0.woolworths.media/content/new-homepage/offertile-special-fruit-veg-white-seedless-grapes.jpg"/>
     )
+
+    const description = `
+        Descrição do produto\n
+        Preço: R$3,50
+    `
+
     return (
         <Card actions={actions} className="product-card">
             <Skeleton loading={false} avatar active>
-                <Card.Meta avatar={avatar} title="Nome do Produto" description="Descrição do produto"/>
+                <Card.Meta avatar={avatar} title="Nome do Produto" description={description}/>
             </Skeleton>
         </Card>
     )

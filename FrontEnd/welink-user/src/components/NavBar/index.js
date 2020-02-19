@@ -2,7 +2,11 @@ import React from 'react';
 
 import { Row, Col } from 'antd';
 import { Input, Affix } from 'antd';
-import { Drawer, Button, Icon } from 'antd';
+import { Button, Icon } from 'antd';
+
+import ShoppingCart from 'components/ShoppingCart';
+import MenuToggler from 'components/MenuToggler';
+import UserMenu from 'components/UserMenu';
 
 import './style.css';
 
@@ -12,33 +16,18 @@ function SearchBar(){
     )
 }
 
-function ShoppingCart(){
-    return (<Button type="primary" shape="circle">
-        <Icon type="shopping-cart"/>
-    </Button>)
-}
-
-function UserMenu(){
-    return (<Button type="primary" shape="circle">
-        <Icon type="user"/>
-    </Button>)
-}
-
-function MenuToggler(){
-    return (<Button type="primary" shape="circle">
-        <Icon type="menu" className="m-0"/>
-    </Button>)
-}
-
 export default function NavBar(){
     return (
         <Affix>
             <Row type="flex" justify="space-between" align="middle"
-                className="navbar p-3">
+                className="navbar p-2">
                 <Col><MenuToggler/></Col>
-                <Col xs={15} lg={21}><SearchBar/></Col>
-                <Col><ShoppingCart/></Col>
+                <Col offset={16}><ShoppingCart/></Col>
                 <Col><UserMenu/></Col>
+            </Row>
+            <Row type="flex" justify="space-between" align="middle"
+                className="navbar p-2">
+                <Col span={24}><SearchBar/></Col>
             </Row>
         </Affix>
     )

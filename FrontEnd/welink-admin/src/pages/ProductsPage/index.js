@@ -3,7 +3,7 @@ import { AdminLayout } from 'layouts/';
 
 import ProductsTable from './ProductsTable';
 import Metrics from './Metrics';
-    import AddModal from './AddModal';
+import AddModal from './AddModal';
 
 export default function ProductsPage(){
     /* Pagina de produtos */
