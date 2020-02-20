@@ -29,7 +29,6 @@ public class SigninAdminController {
     }
 
 
-
     @GetMapping("/signin-admin")
     @ResponseBody
     public String validateLogin(@RequestParam String email, @RequestParam String password){
@@ -45,6 +44,10 @@ public class SigninAdminController {
     public Optional<TbUserAdmin> findOne(@PathVariable("id") Long id){
         return repository.findById(id);//se não achar retorna null
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseBody
+    public void delete(@PathVariable Long id) { repository.deleteById(id); }
 
     public Boolean loginValidate(String email, String password){
         System.out.println(repository.findOneByemail(email).getPassword());

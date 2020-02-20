@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class TbUserAdmin {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
