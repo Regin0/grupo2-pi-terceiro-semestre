@@ -29,7 +29,7 @@ public class SigninAdminController {
     }
 
 
-    @GetMapping("/signin-admin")
+    @PostMapping("/signin-admin")
     @ResponseBody
     public String validateLogin(@RequestParam String email, @RequestParam String password){
         if(loginValidate(email,password)){
