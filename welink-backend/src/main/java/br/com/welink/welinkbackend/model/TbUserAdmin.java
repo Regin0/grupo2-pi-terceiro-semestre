@@ -36,6 +36,10 @@ public class TbUserAdmin {
         this.fkEnterprise = fkEnterprise;
     }
 
+    public TbUserAdmin(String cpf, String birthday, String email, String name, String password) {
+
+    }
+
     public Long getId() {
         return id;
     }
