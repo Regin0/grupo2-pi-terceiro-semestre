@@ -26,8 +26,7 @@ public class TbUserAdmin {
 
     }
 
-    public TbUserAdmin(Long id, String cpf, String email, String birthday, String name, String password, Long fkEnterprise) {
-        this.id = id;
+    public TbUserAdmin(String cpf, String email, String birthday, String name, String password, Long fkEnterprise) {
         this.cpf = cpf;
         this.email = email;
         this.birthday = birthday;

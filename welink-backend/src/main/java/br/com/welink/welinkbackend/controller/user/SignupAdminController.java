@@ -23,8 +23,8 @@ public class SignupAdminController {
     @PostMapping("/signup-admin")
     @ResponseBody
     public String postSignup(@RequestParam String birthday, @RequestParam String cpf , @RequestParam String email,
-                             @RequestParam String name, @RequestParam String password){
-        TbUserAdmin tbUser = new TbUserAdmin( cpf, birthday, email, name, password);//instancia a classe do tbUser
+                             @RequestParam String name, @RequestParam String password, @RequestParam Long fkEnterprise){
+        TbUserAdmin tbUser = new TbUserAdmin( cpf, birthday, email, name, password, fkEnterprise);//instancia a classe do tbUser
 
         if (repository.findOneByemail(email) == null){//validação se o cpf do usuario existe
             repository.save(tbUser);

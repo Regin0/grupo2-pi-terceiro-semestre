@@ -25,32 +25,20 @@ public class SigninAdminController {
     @GetMapping("/signin-admin")
     @ResponseBody
     public List<TbUserAdmin> findAll(){
-        return (List<TbUserAdmin>) repository;
+        return (List<TbUserAdmin>) repository.findAll();
     }
-
 
     @PostMapping("/signin-admin")
     @ResponseBody
-    public String validateLogin(@RequestParam String email, @RequestParam String password){
-        if(loginValidate(email,password)){
+    public String validateLoginAdmin(@RequestParam String email, @RequestParam String password){
+        if (loginValidate(email, password)){
             return "true";
-        }else{
-            return "Não foi :c ";
+        }else {
+            return "nao foi";
         }
     }
 
-    @GetMapping("/signin-admin/{id}")
-    @ResponseBody
-    public Optional<TbUserAdmin> findOne(@PathVariable("id") Long id){
-        return repository.findById(id);//se não achar retorna null
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseBody
-    public void delete(@PathVariable Long id) { repository.deleteById(id); }
-
     public Boolean loginValidate(String email, String password){
-        System.out.println(repository.findOneByemail(email).getPassword());
         if (repository.findOneByemail(email)!=null){
             if (repository.findOneByemail(email).getPassword()==password) {
                 return true;
@@ -62,3 +50,5 @@ public class SigninAdminController {
         }//ESTA DANDO ERRO NA VALIDAÇÃO VERIFICAR
     }
 }
+
+
