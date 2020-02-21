@@ -1,35 +1,36 @@
 package br.com.welink.welinkbackend.controller.user;
 
+
 import br.com.welink.welinkbackend.model.TbUser;
+import br.com.welink.welinkbackend.model.TbUserAdmin;
 import br.com.welink.welinkbackend.repository.TbUserAdminRepository;
 import br.com.welink.welinkbackend.repository.TbUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
-public class SignupController {
+@RequestMapping("/user/admin")
+public class SignupAdminController {
 
     @Autowired
-    private TbUserRepository repository;
+    private TbUserAdminRepository repository;
 
-    public SignupController(TbUserRepository repository) {
+    public SignupAdminController(TbUserAdminRepository repository) {
         this.repository = repository;
     }
 
     //rotas de cadastro
     @PostMapping("/signup")
     @ResponseBody
-    public String postSignup(@RequestParam String cpf,@RequestParam String birthday , @RequestParam String email,
-                             @RequestParam String name, @RequestParam String password){
-        TbUser tbUser = new TbUser(cpf, birthday, email, name, password);//instancia a classe do tbUser
+    public String postSignup(@RequestParam String birthday, @RequestParam String cpf , @RequestParam String email,
+                             @RequestParam String name, @RequestParam String password, @RequestParam Long fkEnterprise){
+        TbUserAdmin tbUser = new TbUserAdmin( cpf, email, birthday, name, password, fkEnterprise);
 
-        if (!(repository.findOneByemail(email) != null)){//validação se o cpf do usuario existe
+        if (!(repository.findOneByemail(email) != null)){
             repository.save(tbUser);
             return tbUser.errorMessage(1);
         }else{
             return tbUser.errorMessage(2);
         }
     }
-
 }

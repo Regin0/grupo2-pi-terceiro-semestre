@@ -7,5 +7,4 @@ public interface TbUserRepository extends CrudRepository<TbUser, Long> {
 
     public TbUser findOneByemail(String email );
 
-    public TbUser findByPassword(String password );
 }
