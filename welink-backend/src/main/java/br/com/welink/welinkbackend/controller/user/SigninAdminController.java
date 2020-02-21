@@ -22,32 +22,26 @@ public class SigninAdminController {
     }
 
     //rotas de login
-    @GetMapping("/signin-admin")
+    @GetMapping("/signin")
     @ResponseBody
     public List<TbUserAdmin> findAll(){
         return (List<TbUserAdmin>) repository.findAll();
     }
 
-    @PostMapping("/signin-admin")
+    @PostMapping("/signin")
     @ResponseBody
-    public String validateLoginAdmin(@RequestParam String email, @RequestParam String password){
-        if (loginValidate(email, password)){
-            return "true";
-        }else {
-            return "nao foi";
-        }
+    public Boolean validateLoginAdmin(@RequestParam String email, @RequestParam String password){
+        return loginValidate(email, password);
     }
 
     public Boolean loginValidate(String email, String password){
-        if (repository.findOneByemail(email)!=null){
-            if (repository.findOneByemail(email).getPassword()==password) {
-                return true;
-            }else{
-                return false;
-            }
+        if (repository.findOneByemail(email) != null &&
+                repository.findOneByemail(email).getEmail().equals(email) &&
+                repository.findOneByemail(email).getPassword().equals(password)) {
+            return true;
         }else{
             return false;
-        }//ESTA DANDO ERRO NA VALIDAÇÃO VERIFICAR
+        }
     }
 }
 

@@ -20,13 +20,13 @@ public class SignupAdminController {
     }
 
     //rotas de cadastro
-    @PostMapping("/signup-admin")
+    @PostMapping("/signup")
     @ResponseBody
     public String postSignup(@RequestParam String birthday, @RequestParam String cpf , @RequestParam String email,
                              @RequestParam String name, @RequestParam String password, @RequestParam Long fkEnterprise){
-        TbUserAdmin tbUser = new TbUserAdmin( cpf, birthday, email, name, password, fkEnterprise);//instancia a classe do tbUser
+        TbUserAdmin tbUser = new TbUserAdmin( cpf, email, birthday, name, password, fkEnterprise);
 
-        if (repository.findOneByemail(email) == null){//validação se o cpf do usuario existe
+        if (!(repository.findOneByemail(email) != null)){
             repository.save(tbUser);
             return tbUser.errorMessage(1);
         }else{

@@ -24,7 +24,7 @@ public class SignupController {
                              @RequestParam String name, @RequestParam String password){
         TbUser tbUser = new TbUser(cpf, birthday, email, name, password);//instancia a classe do tbUser
 
-        if (repository.findOneByemail(email) == null){//validação se o cpf do usuario existe
+        if (!(repository.findOneByemail(email) != null)){//validação se o cpf do usuario existe
             repository.save(tbUser);
             return tbUser.errorMessage(1);
         }else{
