@@ -6,6 +6,4 @@ import org.springframework.data.repository.CrudRepository;
 public interface TbUserAdminRepository extends CrudRepository<TbUserAdmin, Long> {
 
     public TbUserAdmin findOneByemail(String email);
-
-    public TbUserAdmin findByPassword(String password);
 }

@@ -12,15 +12,15 @@ public class TbUserAdmin {
     @Column
     private String cpf;
     @Column
+    private String birthday;
+    @Column
     private String email;
     @Column
-    private String birthday;
+    private Long fkEnterprise;
     @Column
     private String name;
     @Column
     private String password;
-    @Column
-    private Long fkEnterprise;
 
     public TbUserAdmin(){
 
