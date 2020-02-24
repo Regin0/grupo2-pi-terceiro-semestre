@@ -1,0 +1,11 @@
+    @GetMapping("/signin/{id}")
+    @ResponseBody
+    public TbUser findOne(@PathVariable("id") String id){
+        return repository.findOneByemail(id);//se nao achar retorna null
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseBody
+    public void destroy(@PathVariable Long id){
+       repository.deleteById(id);
+    }
