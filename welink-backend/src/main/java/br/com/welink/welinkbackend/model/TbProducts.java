@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class TbProducts {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     @Column
     private String brand;
     @Column
@@ -17,22 +17,49 @@ public class TbProducts {
     @Column
     private String name;
     @Column
-    private double price;
+    private Integer quantity;
     @Column
-    private long fkCompanyProducts;
+    private Double price;
+    @Column
+    private Long fkCompanyProducts;
 
     public TbProducts() {
     }
 
-    public TbProducts(String brand, String date, String name, double price, long fkCompanyProducts) {
+    public TbProducts(String brand, String date, String name, Integer quantity, Double price, Long fkCompanyProducts) {
         this.name = name;
         this.price = price;
         this.brand = brand;
         this.date = date;
+        this.quantity = quantity;
         this.fkCompanyProducts = fkCompanyProducts;
     }
 
     public TbProducts(String brand, String date, String name, double price) {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setFkCompanyProducts(Long fkCompanyProducts) {
+        this.fkCompanyProducts = fkCompanyProducts;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public String getName() {
