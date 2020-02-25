@@ -21,7 +21,6 @@ public class TbUser {
     private String password;
 
     public TbUser(){
-
     }
 
     public TbUser(String birthday, String cpf, String email, String name, String password) {

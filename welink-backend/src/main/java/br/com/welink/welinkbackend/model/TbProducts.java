@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class TbProducts {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     @Column
     private String brand;
     @Column
