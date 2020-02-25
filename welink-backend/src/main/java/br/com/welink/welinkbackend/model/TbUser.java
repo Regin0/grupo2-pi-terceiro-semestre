@@ -10,21 +10,20 @@ public class TbUser {
     @Column
     private Long id;
     @Column
+    private String birthday;
+    @Column
     private String cpf;
     @Column
     private String email;
-    @Column
-    private String birthday;
     @Column
     private String name;
     @Column
     private String password;
 
     public TbUser(){
-
     }
 
-    public TbUser(String cpf, String birthday, String email, String name, String password) {
+    public TbUser(String birthday, String cpf, String email, String name, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -87,7 +86,7 @@ public class TbUser {
             case 2:
                 return "Usuário já existe!";
             default:
-                return "Desculpe, mas este erro é desconehcido, por favor contatar o suporte";
+                return "Desculpe, mas este erro é desconhecido, por favor contatar o suporte";
         }
     }
 }

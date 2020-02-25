@@ -35,9 +35,9 @@ public class SigninAdminController {
     }
 
     public Boolean loginValidate(String email, String password){
-        if (repository.findOneByemail(email) != null &&
-                repository.findOneByemail(email).getEmail().equals(email) &&
-                repository.findOneByemail(email).getPassword().equals(password)) {
+        if (repository.findOneByEmail(email) != null &&
+                repository.findOneByEmail(email).getEmail().equals(email) &&
+                repository.findOneByEmail(email).getPassword().equals(password)) {
             return true;
         }else{
             return false;

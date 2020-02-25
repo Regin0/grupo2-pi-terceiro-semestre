@@ -10,23 +10,23 @@ public class TbUserAdmin {
     @Column
     private Long id;
     @Column
+    private String birthday;
+    @Column
     private String cpf;
     @Column
     private String email;
     @Column
-    private String birthday;
+    private Long fkEnterprise;
     @Column
     private String name;
     @Column
     private String password;
-    @Column
-    private Long fkEnterprise;
 
     public TbUserAdmin(){
 
     }
 
-    public TbUserAdmin(String cpf, String email, String birthday, String name, String password, Long fkEnterprise) {
+    public TbUserAdmin(String birthday, String cpf, String email,  String name, String password, Long fkEnterprise) {
         this.cpf = cpf;
         this.email = email;
         this.birthday = birthday;
@@ -35,8 +35,7 @@ public class TbUserAdmin {
         this.fkEnterprise = fkEnterprise;
     }
 
-    public TbUserAdmin(String cpf, String birthday, String email, String name, String password) {
-
+    public TbUserAdmin(String birthday, String cpf, String email, String name, String password) {
     }
 
     public Long getId() {
@@ -102,7 +101,7 @@ public class TbUserAdmin {
             case 2:
                 return "Usuário já existe!";
             default:
-                return "Desculpe, mas este erro é desconehcido, por favor contatar o suporte";
+                return "Desculpe, mas este erro é desconhecido, por favor contatar o suporte";
         }
     }
 
