@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Row, Col } from 'antd';
-import { Input, Affix } from 'antd';
+import { Input, Affix, Typography } from 'antd';
 import { Button, Icon } from 'antd';
 
 import ShoppingCart from 'components/ShoppingCart';
@@ -21,7 +21,10 @@ export default function NavBar(){
         <Affix>
             <Row type="flex" justify="space-between" align="middle"
                 className="navbar p-2">
-                <Col><MenuToggler/></Col>
+                <Col>
+                    <MenuToggler/>
+                    <Typography.Text className="logo">Mercadinho</Typography.Text>
+                </Col>
                 <Col>
                     <Row type="flex" gutter={[6]}>
                         <Col><ShoppingCart/></Col>
