@@ -14,15 +14,10 @@ public class TbUserAdmin {
     @Column
     private String cpf;
     @Column
-    private String birthday;
-    @Column
     private String email;
     @Column
-<<<<<<< HEAD
-=======
     private Long fkEnterprise;
     @Column
->>>>>>> 0def01b40ce9493c5c8a996863fa2e7860ebdf92
     private String name;
     @Column
     private String password;

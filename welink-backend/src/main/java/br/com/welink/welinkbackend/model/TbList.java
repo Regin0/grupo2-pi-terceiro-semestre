@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class List {
+public class TbList {
     @Id
     @GeneratedValue
     private long id;
@@ -18,16 +18,16 @@ public class List {
     @Column
     private long fkRequest;
 
-    public List() {
+    public TbList() {
     }
 
-    public List(int productQuantity, long fkProduct, long fkRequest) {
+    public TbList(int productQuantity, long fkProduct, long fkRequest) {
         this.productQuantity = productQuantity;
         this.fkProduct = fkProduct;
         this.fkRequest = fkRequest;
     }
 
-    public List(int productQuantity) {
+    public TbList(int productQuantity) {
     }
 
     public int getProductQuantity() {

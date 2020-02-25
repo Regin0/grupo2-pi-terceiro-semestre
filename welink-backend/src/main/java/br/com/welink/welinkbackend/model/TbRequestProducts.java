@@ -3,7 +3,7 @@ package br.com.welink.welinkbackend.model;
 import javax.persistence.*;
 
 @Entity
-public class RequestProducts {
+public class TbRequestProducts {
 
  @Id
  @GeneratedValue
@@ -15,16 +15,16 @@ private int status;
  @Column
 private long fkUser;
 
-    public RequestProducts() {
+    public TbRequestProducts() {
     }
 
-    public RequestProducts(int products, int status, Long fkUser) {
+    public TbRequestProducts(int products, int status, Long fkUser) {
         this.products = products;
         this.status = status;
         this.fkUser = fkUser;
     }
 
-    public RequestProducts(int products, int status) {
+    public TbRequestProducts(int products, int status) {
     }
 
     public int getProducts() {

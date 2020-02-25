@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Products {
+public class TbProducts {
     @Id
     @GeneratedValue
     private long id;
@@ -21,10 +21,10 @@ public class Products {
     @Column
     private long fkCompanyProducts;
 
-    public Products() {
+    public TbProducts() {
     }
 
-    public Products(String brand, String date,String name, double price, long fkCompanyProducts) {
+    public TbProducts(String brand, String date, String name, double price, long fkCompanyProducts) {
         this.name = name;
         this.price = price;
         this.brand = brand;
@@ -32,7 +32,7 @@ public class Products {
         this.fkCompanyProducts = fkCompanyProducts;
     }
 
-    public Products(String brand, String date, String name, double price) {
+    public TbProducts(String brand, String date, String name, double price) {
     }
 
     public String getName() {

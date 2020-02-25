@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Company {
+public class TbCompany {
 
     @Id
     @GeneratedValue
@@ -18,10 +18,10 @@ public class Company {
     private String name;
 
 
-    public Company() {
+    public TbCompany() {
     }
 
-    public Company(String cnpj, String name) {
+    public TbCompany(String cnpj, String name) {
         this.name = name;
         this.cnpj = cnpj;
     }
