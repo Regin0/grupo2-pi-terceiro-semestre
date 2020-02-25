@@ -32,4 +32,9 @@ public class CompanyController {
             return tbCompany.errorMessage(3);
         }
     }
+
+    @GetMapping("/{name}")
+    public TbCompany getCompany(@PathVariable("name") String companyName){
+        return repository.findOneByname(companyName);
+    }
 }
