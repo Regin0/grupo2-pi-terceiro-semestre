@@ -22,7 +22,7 @@ public class SignupController {
     @ResponseBody
     public String postSignup(@RequestParam String cpf,@RequestParam String birthday , @RequestParam String email,
                              @RequestParam String name, @RequestParam String password){
-        TbUser tbUser = new TbUser(cpf, birthday, email, name, password);//instancia a classe do tbUser
+        TbUser tbUser = new TbUser(birthday, cpf, email, name, password);//instancia a classe do tbUser
 
         if (!(repository.findOneByemail(email) != null)){//validação se o cpf do usuario existe
             repository.save(tbUser);

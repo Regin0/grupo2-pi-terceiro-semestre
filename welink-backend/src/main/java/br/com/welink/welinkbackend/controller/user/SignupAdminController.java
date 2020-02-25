@@ -24,9 +24,9 @@ public class SignupAdminController {
     @ResponseBody
     public String postSignup(@RequestParam String birthday, @RequestParam String cpf , @RequestParam String email,
                              @RequestParam String name, @RequestParam String password, @RequestParam Long fkEnterprise){
-        TbUserAdmin tbUser = new TbUserAdmin( cpf, email, birthday, name, password, fkEnterprise);
+        TbUserAdmin tbUser = new TbUserAdmin(birthday, cpf, email, name, password, fkEnterprise);
 
-        if (!(repository.findOneByemail(email) != null)){
+        if (repository.findOneByEmail(email) == null){
             repository.save(tbUser);
             return tbUser.errorMessage(1);
         }else{

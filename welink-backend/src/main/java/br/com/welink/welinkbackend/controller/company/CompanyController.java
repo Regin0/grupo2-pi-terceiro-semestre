@@ -21,11 +21,15 @@ public class CompanyController {
     public String postCompany(@RequestParam String companyName, @RequestParam String cnpj){
         TbCompany tbCompany = new TbCompany(cnpj, companyName);
 
-        if (!(repository.findOneByname(companyName) != null)){
-            repository.save(tbCompany);
-            return tbCompany.errorMessage(1);
+        if (tbCompany.getCnpj().length()!=15 || tbCompany.getCnpj().length()!=13){
+            if (!(repository.findOneByname(companyName) != null)){
+                repository.save(tbCompany);
+                return tbCompany.errorMessage(1);
+            }else{
+                return tbCompany.errorMessage(2);
+            }
         }else{
-            return tbCompany.errorMessage(2);
+            return tbCompany.errorMessage(3);
         }
     }
 }

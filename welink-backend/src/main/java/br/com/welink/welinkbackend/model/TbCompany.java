@@ -48,6 +48,8 @@ public class TbCompany {
                 return "Empresa cadastrada!";
             case 2:
                 return "Empresa já existe!";
+            case 3:
+                return "CNPJ invalido, favor verificar";
             default:
                 return "Desculpe, mas este erro é desconhecido, por favor contatar o suporte";
         }
