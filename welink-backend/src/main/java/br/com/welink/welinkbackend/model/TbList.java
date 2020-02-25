@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class TbList {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     @Column
     private int productQuantity;
     @Column
