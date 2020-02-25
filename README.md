@@ -32,10 +32,21 @@ O obejtivo da nossa solução é o agendamento de compras de supermercados on-li
 
 ### Metas
  - [ ] Site Institucional - Site institucional com apresentação da proposta de négocio da empresa.
+     - [ ] Tela de Apresentação do Equipe
+     - [ ] Aba de Sobre Nós (WeLink)
+     - [ ] Aba de Contatos
+     - [ ] Redirecionar para tela de cadastro do administrador
  - [ ] Site do Administrador -	Site para o gerenciamento do estoque do mercado.
- - [ ] Site Customizado	-	Site customizado com a empresa desejada do cliente final.
- - [ ] Tela de Cadastro	-	Tela de cadastro para ambos os sites.
+     - [ ] Tela de criação da loja
+     - [ ] Tela de Controle de Estoque
+ - [ ] Site Customizado/Mercadinho	-	Site customizado com a empresa desejada do cliente final.
+     - [ ] Tela para efetuar compras e agendamento
+     - [ ] Método de Pagamento através do Pague Seguro.
+ - [ ] Tela de Login/Cadastro	-	Tela de cadastro para site de adminstrador e customizado.
  - [ ] Responsividade	- Site adaptável em qualquer dispositivo.
+ - [ ] Estar hospedado em um Banco de Dados MySQL.
+ - [ ] Regras de Negócios devem estar centralizadas no Back-End Spring Boot.
+ - [ ] Ser esteticamente agradável.
 
 ## Arquitetura de solução (HLD)
 <img src="https://i.imgur.com/8YTGYRS.png" width="450">
