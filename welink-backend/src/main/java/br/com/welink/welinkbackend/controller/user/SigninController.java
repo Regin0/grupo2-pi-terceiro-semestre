@@ -19,14 +19,7 @@ public class SigninController {
         this.repository = repository;
     }
 
-    //rotas de login
     @GetMapping("/signin")
-    @ResponseBody
-    public List<TbUser> findAll(){
-        return (List<TbUser>) repository.findAll();
-    }
-
-    @PostMapping("/signin")
     @ResponseBody
     public Boolean validateLogin(@RequestParam String email, @RequestParam String password){
         return loginValidate(email, password);

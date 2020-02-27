@@ -21,14 +21,7 @@ public class SigninAdminController {
         this.repository = repository;
     }
 
-    //rotas de login
     @GetMapping("/signin")
-    @ResponseBody
-    public List<TbUserAdmin> findAll(){
-        return (List<TbUserAdmin>) repository.findAll();
-    }
-
-    @PostMapping("/signin")
     @ResponseBody
     public Boolean validateLoginAdmin(@RequestParam String email, @RequestParam String password){
         return loginValidate(email, password);
