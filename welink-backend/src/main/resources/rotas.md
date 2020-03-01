@@ -11,6 +11,9 @@ GET: /products/{name} --ler um produto
 PUT: /products/change --mudar os dados de um produto
 DELETE: /{name} --deletar um produto
 
+REQUEST:
+/user/admin/request --
+
 USER:
 POST: /user/signup --registrar um novo usuario padrao
 POST: /user/admin/signup --registrar um novo usuario dono de mercado
