@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TbRequestRepository extends JpaRepository<TbRequestProducts, Long> {
 
-    public TbRequestRepository findOneById(Long id);
+    public TbRequestRepository findOneById(Integer product);
 }
